@@ -79,13 +79,16 @@ const App = () => {
                     toggleMute={toggleMute}
                     isMuted={isMuted}
                 />
-                <Controls toggleTimer={toggleTimer} resetTimer={resetTimer} isRunning={isRunning} />
+
                 <Settings
                     workLength={workLength}
                     setWorkLength={setWorkLength}
                     breakLength={breakLength}
                     setBreakLength={setBreakLength}
+                    setTimeLeft={setTimeLeft}
+                    isRunning={isRunning}
                 />
+                <Controls toggleTimer={toggleTimer} resetTimer={resetTimer} isRunning={isRunning} />
             {showIcon && (
                 <div className="volume-icon" onClick={toggleMute}>
                     {isMuted ? (

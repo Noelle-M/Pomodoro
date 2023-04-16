@@ -1,38 +1,55 @@
-import React, {Fragment} from 'react';
+import React, { useState } from 'react';
 
-const Settings = ({ workLength, setWorkLength, breakLength, setBreakLength }) => {
+const Settings = ({
+                      workLength,
+                      setWorkLength,
+                      breakLength,
+                      setBreakLength,
+                      setTimeLeft,
+                      isRunning,
+                  }) => {
+    const [localWorkLength, setLocalWorkLength] = useState(workLength / 60);
+    const [localBreakLength, setLocalBreakLength] = useState(breakLength / 60);
+
     const handleWorkChange = (event) => {
-        const newLength = parseInt(event.target.value) * 60;
-        setWorkLength(newLength);
+        const newLength = parseInt(event.target.value);
+        setLocalWorkLength(newLength);
+        setWorkLength(newLength * 60);
+        if (!isRunning) {
+            setTimeLeft(newLength * 60);
+        }
     };
 
     const handleBreakChange = (event) => {
-        const newLength = parseInt(event.target.value) * 60;
-        setBreakLength(newLength);
+        const newLength = parseInt(event.target.value);
+        setLocalBreakLength(newLength);
+        setBreakLength(newLength * 60);
+        if (!isRunning) {
+            setTimeLeft(newLength * 60);
+        }
     };
 
     return (
-        <Fragment>
         <div className="settings row justify-content-center">
-            <hr/>
-            <div className="col-md-6 text-center">
-                <label htmlFor="workLength">Temps de concentration (minutes) :</label>
+            <hr />
+            <div className="col-6 text-center">
+                <label htmlFor="workLength">Concentration (mn) :</label>
                 <input
                     type="number"
                     id="workLength"
-                    value={workLength / 60}
+                    value={localWorkLength}
                     onChange={handleWorkChange}
                     min="1"
                     max="60"
                     className="form-control"
                 />
             </div>
-            <div className="col-md-6 text-center">
-                <label htmlFor="breakLength">Temps de pause (minutes) :</label>
+            <div className="col-6 text-center">
+                <label htmlFor="breakLength">Pause (mn) :</label>
                 <input
                     type="number"
                     id="breakLength"
-                    value={breakLength / 60}
+                    value={localBreakLength}
                     onChange={handleBreakChange}
                     min="1"
                     max="60"
@@ -40,7 +57,6 @@ const Settings = ({ workLength, setWorkLength, breakLength, setBreakLength }) =>
                 />
             </div>
         </div>
-        </Fragment>
     );
 };
 

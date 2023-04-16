@@ -22,10 +22,14 @@ body{
 }
 
 .controls button {
-  font-size: 24px;
+  font-size: 54px;
   padding: 10px 20px;
   margin: 0 10px;
   cursor: pointer;
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  border: 4px solid #977B64;
 }
 
 .settings {
@@ -69,7 +73,7 @@ body{
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  max-width: 100%;
   height: 100%;
   background-color: #FFCA2C;
   border-radius: 75px;
@@ -80,6 +84,7 @@ body{
   top: 0;
   left: 0;
   height: 100%;
+  max-width: 100%;
   z-index: 0;
   border-radius: 75px;
 }
