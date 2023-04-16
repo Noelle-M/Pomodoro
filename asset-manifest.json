@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/Noelle-M/pomodoro.git/static/css/main.fdb4acb4.css",
-    "main.js": "/Noelle-M/pomodoro.git/static/js/main.f2cc227d.js",
-    "static/js/787.b1af5461.chunk.js": "/Noelle-M/pomodoro.git/static/js/787.b1af5461.chunk.js",
-    "index.html": "/Noelle-M/pomodoro.git/index.html",
-    "main.fdb4acb4.css.map": "/Noelle-M/pomodoro.git/static/css/main.fdb4acb4.css.map",
-    "main.f2cc227d.js.map": "/Noelle-M/pomodoro.git/static/js/main.f2cc227d.js.map",
-    "787.b1af5461.chunk.js.map": "/Noelle-M/pomodoro.git/static/js/787.b1af5461.chunk.js.map"
+    "main.css": "/pomodoro.git/static/css/main.fdb4acb4.css",
+    "main.js": "/pomodoro.git/static/js/main.7f4ad0d1.js",
+    "static/js/787.b1af5461.chunk.js": "/pomodoro.git/static/js/787.b1af5461.chunk.js",
+    "index.html": "/pomodoro.git/index.html",
+    "main.fdb4acb4.css.map": "/pomodoro.git/static/css/main.fdb4acb4.css.map",
+    "main.7f4ad0d1.js.map": "/pomodoro.git/static/js/main.7f4ad0d1.js.map",
+    "787.b1af5461.chunk.js.map": "/pomodoro.git/static/js/787.b1af5461.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.fdb4acb4.css",
-    "static/js/main.f2cc227d.js"
+    "static/js/main.7f4ad0d1.js"
   ]
 }
