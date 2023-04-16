@@ -69,20 +69,23 @@ const App = () => {
     return (
         <BrowserRouter basename={process.env.PUBLIC_URL}>
             <div className="app">
-            <Timer
-                timeLeft={timeLeft}
-                isRunning={isRunning}
-                reset={reset}
-                onResetHandled={onResetHandled}
-                initialTimeLeft={initialTimeLeft}
-            />
-            <Controls toggleTimer={toggleTimer} resetTimer={resetTimer} isRunning={isRunning} />
-            <Settings
-                workLength={workLength}
-                setWorkLength={setWorkLength}
-                breakLength={breakLength}
-                setBreakLength={setBreakLength}
-            />
+                <Timer
+                    timeLeft={timeLeft}
+                    isRunning={isRunning}
+                    reset={reset}
+                    onResetHandled={onResetHandled}
+                    initialTimeLeft={initialTimeLeft}
+                    isWorkTime={isWorkTime}
+                    toggleMute={toggleMute}
+                    isMuted={isMuted}
+                />
+                <Controls toggleTimer={toggleTimer} resetTimer={resetTimer} isRunning={isRunning} />
+                <Settings
+                    workLength={workLength}
+                    setWorkLength={setWorkLength}
+                    breakLength={breakLength}
+                    setBreakLength={setBreakLength}
+                />
             {showIcon && (
                 <div className="volume-icon" onClick={toggleMute}>
                     {isMuted ? (

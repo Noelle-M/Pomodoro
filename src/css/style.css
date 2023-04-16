@@ -88,3 +88,7 @@ body{
   position: relative;
   z-index: 2;
 }
+
+.timer-container img{
+  width: 45%;
+}
