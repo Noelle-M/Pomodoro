@@ -33,7 +33,7 @@ const Settings = ({
         <div className="settings row justify-content-center">
             <hr />
             <div className="col-6 text-center">
-                <label htmlFor="workLength">Concentration (mn) :</label>
+                <label htmlFor="workLength">Work (mn)</label>
                 <input
                     type="number"
                     id="workLength"
@@ -45,7 +45,7 @@ const Settings = ({
                 />
             </div>
             <div className="col-6 text-center">
-                <label htmlFor="breakLength">Pause (mn) :</label>
+                <label htmlFor="breakLength">Pause (mn)</label>
                 <input
                     type="number"
                     id="breakLength"
