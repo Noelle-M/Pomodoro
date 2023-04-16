@@ -15,7 +15,7 @@ const Settings = ({ workLength, setWorkLength, breakLength, setBreakLength }) =>
         <Fragment>
         <div className="settings row justify-content-center">
             <hr/>
-            <div className="col-md-6 text-right">
+            <div className="col-md-6 text-center">
                 <label htmlFor="workLength">Temps de concentration (minutes) :</label>
                 <input
                     type="number"
@@ -27,7 +27,7 @@ const Settings = ({ workLength, setWorkLength, breakLength, setBreakLength }) =>
                     className="form-control"
                 />
             </div>
-            <div className="col-md-6 text-left">
+            <div className="col-md-6 text-center">
                 <label htmlFor="breakLength">Temps de pause (minutes) :</label>
                 <input
                     type="number"
