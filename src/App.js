@@ -4,6 +4,7 @@ import Controls from './components/Controls';
 import Settings from './components/Settings';
 import './css/style.css';
 import { FaVolumeUp, FaVolumeMute } from 'react-icons/fa';
+import { BrowserRouter } from 'react-router-dom';
 
 const App = () => {
     const [isRunning, setIsRunning] = useState(false);
@@ -66,7 +67,8 @@ const App = () => {
     };
 
     return (
-        <div className="app">
+        <BrowserRouter basename={process.env.PUBLIC_URL}>
+            <div className="app">
             <Timer
                 timeLeft={timeLeft}
                 isRunning={isRunning}
@@ -92,6 +94,7 @@ const App = () => {
             )}
             <audio ref={audioRef} src="dong-11.mp3" preload="auto" />
         </div>
+        </BrowserRouter>
     );
 };
 
